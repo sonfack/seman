@@ -56,14 +56,74 @@
 
                     </ul>
                     <div class="tab-content">
+
                         <div class="tab-pane fade  in active" id="textannotation">
-                            text
+                            <p style="margin-top: 2%; margin-bottom: 2%;">Enter words you want to annotate in the text erea. If you have many words, separate the by commas</p>
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="wordstoannotate">Enter words to annotate</label>
+                                    <div class="col-md-10">
+                                        <textarea class="form-control" rows="5" id="wordstoannotate" placeholder="word-1, word-2, word-3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 justify-content-start" for="selectontology">Select an Ontology:</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" id="selectontology">
+                                            <option selected>Use all Ontologies</option>
+                                            <option value="http://purl.obolibrary.org/obo/go.owl">http://purl.obolibrary.org/obo/go.owl</option>
+                                            <option value="http://purl.obolibrary.org/obo/po.owl">http://purl.obolibrary.org/obo/po.owl</option>
+                                            <option value="http://purl.obolibrary.org/obo/agro.owl">http://purl.obolibrary.org/obo/agro.owl</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2">Enter Ontology here</label>
+                                    <div class="col-md-10">
+                                        <input name="newontology" value=""  class="form-control" placeholder="enter specific ontology here">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-success col-md-offset-2 " value="Annotate now">
+                                </div>
+
+                            </form>
                         </div>
+
                         <div class="tab-pane fade" id="fileannotation">
-                            file
+                            <p style="margin-top: 2%; margin-bottom: 2%">Annotate a CSV file</p>
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-md-2">Select file to annotate</label>
+                                    <div class="col-md-10">
+                                        <input type="file"  id="annotatefile">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 justify-content-start" for="selectontology">Select an Ontology:</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" id="selectontology">
+                                            <option selected>Use all Ontologies</option>
+                                            <option value="http://purl.obolibrary.org/obo/go.owl">http://purl.obolibrary.org/obo/go.owl</option>
+                                            <option value="http://purl.obolibrary.org/obo/po.owl">http://purl.obolibrary.org/obo/po.owl</option>
+                                            <option value="http://purl.obolibrary.org/obo/agro.owl">http://purl.obolibrary.org/obo/agro.owl</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2">Enter Ontology here</label>
+                                    <div class="col-md-10">
+                                        <input name="newontology" value=""  class="form-control" placeholder="enter specific ontology here">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-success col-lg-offset-2" value="Annotate now">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
         </div>
         <script src="{% static 'js/jquery.js' %}"></script>
